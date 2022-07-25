@@ -1,15 +1,15 @@
 pipeline{
     agent any
     stages{
-        stage("stage1"){
+        stage("Gitpull"){
             steps{
-                echo "this is git hub"
+                git credentialsId: 'Github', url: 'https://github.com/kishoremc/example-java-pom.git'
             }
         }
-        stage("stage2"){
+        stage("Maven-Job"){
             steps{
-                echo "Today is linux"
+                sh " mvn clean install"
             }
         }
     }
-}
+} 
