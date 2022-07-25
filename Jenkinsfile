@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Gitpull"){
             steps{
-                git credentialsId: 'Github', url: 'https://github.com/kishoremc/example-java-pom.git'
+                git credentialsId: 'Github', url: 'https://github.com/kishoremc/time-tracker.git'
             }
         }
         stage("Maven-Job"){
